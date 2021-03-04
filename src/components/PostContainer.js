@@ -7,6 +7,7 @@ function PostContainer(props) {
     const dispatch = useDispatch();
 
     const logPosts = () => {
+        {/*why doesn't this line work???*/}
         console.log(JSON.stringify(posts));
     }
 
@@ -17,6 +18,10 @@ function PostContainer(props) {
                 logPosts();
             }}>Fetch Posts</button>
 
+            <div>
+                {/*why doesn't this line work???*/}
+                {posts.map(post => <p>{post.body}</p>)}
+            </div>
         </div>
     );
 }
